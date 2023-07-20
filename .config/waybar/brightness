@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ "$1" == "down" ]; then
+  max_b=$(brightnessctl max)
+  dec_percent=$((max_b/ 100 ))
+  min_b=$((10*dec_percent))
+  cur_b=$(brightnessctl get)
+  new_b=$(( cur_b - dec_percent ))
+  if [ "$new_b" -ge "$min_b" ]; then
+    brightnessctl set "$new_b"
+  fi
+elif [ "$1" == "up" ]; then
+  brightnessctl set +1%
+fi
