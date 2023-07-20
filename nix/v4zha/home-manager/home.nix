@@ -42,6 +42,7 @@
     ghc
     cabal-install
     haskell-language-server
+    marksman
     nodejs
     python3
     glibc
