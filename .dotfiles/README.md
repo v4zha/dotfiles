@@ -1,6 +1,6 @@
 # V4zha's DotFiles
 
-This repository contains my personal dotfiles and configuration files for customizing my NixOS system.The setup includes Hyprland as window manager and Waybar as the status bar, along with Rofi-Wayland as the application launcher.
+This repository contains my personal dotfiles and configuration files of my NixOS system.The setup includes Hyprland as window manager and Waybar as the status bar, along with Rofi-Wayland as the application launcher.
 ![screen1](./assets/nix1.png)
 ## Installation
 
