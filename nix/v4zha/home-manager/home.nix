@@ -32,6 +32,20 @@
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "CascadiaCode" ];
     })
+    #language utils and lsp : )
+    # neovim mason work aakilla , list lsp servers here : )
+    cargo
+    rust-analyzer
+    tree-sitter
+    lua
+    lua-language-server
+    ghc
+    cabal-install
+    haskell-language-server
+    nodejs
+    python3
+    glibc
+    llvmPackages_15.clang-unwrapped
   ];
   home.stateVersion = "23.11";
 }
