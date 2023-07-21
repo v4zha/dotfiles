@@ -31,9 +31,9 @@ for _, lsp_server in pairs(lsp_servers) do
 end
 
 local signs = {
-  Error = " ",
+  Error = "",
   Warn = " ",
-  Hint = " ",
+  Hint = "󰋖",
   Info = " "
 }
 for type, icon in pairs(signs) do

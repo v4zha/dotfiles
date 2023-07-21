@@ -5,6 +5,7 @@
   home.homeDirectory = "/home/v4zha";
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = (pkg: true);
   programs.home-manager.enable = true;
   home.packages = with pkgs;[
     waybar
@@ -34,8 +35,6 @@
     })
     #language utils and lsp : )
     # neovim mason work aakilla , list lsp servers here : )
-    cargo
-    rust-analyzer
     tree-sitter
     lua
     lua-language-server
@@ -45,8 +44,8 @@
     marksman
     nodejs
     python3
-    glibc
-    llvmPackages_15.clang-unwrapped
+    rustup
+    llvmPackages.clang
   ];
   home.stateVersion = "23.11";
 }
