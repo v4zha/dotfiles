@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 {
-  imports = [ ./overlays.nix ./configs/hyprland.nix ];
+  imports = [ ./overlays.nix ./configs/hyprland.nix ./configs/bt.nix ];
   home.username = "v4zha";
   home.homeDirectory = "/home/v4zha";
 
@@ -48,5 +48,6 @@
     llvmPackages.clang
     lldb
   ];
+  services.mpris-proxy.enable = true;
   home.stateVersion = "23.11";
 }
