@@ -50,6 +50,7 @@
     glibc
     lldb
     mold
+    taplo
   ];
   services.mpris-proxy.enable = true;
   home.stateVersion = "23.11";
