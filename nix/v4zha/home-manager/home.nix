@@ -46,6 +46,7 @@
     python3
     rustup
     llvmPackages.clang
+    lldb
   ];
   home.stateVersion = "23.11";
 }
