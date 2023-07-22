@@ -4,10 +4,9 @@ local config = {
     relativenumber = true,
     numberwidth = 4,
     mouse = "a",
-
     hlsearch = true,
     ignorecase = true,
-
+    hidden=false,
     showmode = false,
     showtabline = 2,
     swapfile = false,

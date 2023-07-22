@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 {
-  imports = [ ./overlays.nix ./configs/hyprland.nix ./configs/bt.nix ];
+  imports = [ ./overlays.nix ./config/init.nix ];
   home.username = "v4zha";
   home.homeDirectory = "/home/v4zha";
 
@@ -45,8 +45,11 @@
     nodejs
     python3
     rustup
-    llvmPackages.clang
+    llvmPackages_latest.clang-unwrapped
+    llvmPackages_latest.bintools
+    glibc
     lldb
+    mold
   ];
   services.mpris-proxy.enable = true;
   home.stateVersion = "23.11";
