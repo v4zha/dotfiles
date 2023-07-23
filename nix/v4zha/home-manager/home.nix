@@ -30,6 +30,7 @@
     starship
     librewolf
     kitty
+    direnv
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "CascadiaCode" ];
     })
