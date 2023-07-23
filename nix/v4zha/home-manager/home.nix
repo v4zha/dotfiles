@@ -33,24 +33,6 @@
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "CascadiaCode" ];
     })
-    #language utils and lsp : )
-    # neovim mason work aakilla , list lsp servers here : )
-    tree-sitter
-    lua
-    lua-language-server
-    ghc
-    cabal-install
-    haskell-language-server
-    marksman
-    nodejs
-    python3
-    rustup
-    llvmPackages_latest.clang-unwrapped
-    llvmPackages_latest.bintools
-    glibc
-    lldb
-    mold
-    taplo
   ];
   services.mpris-proxy.enable = true;
   home.stateVersion = "23.11";
