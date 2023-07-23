@@ -9,5 +9,6 @@ if status --is-login
 end
 if status is-interactive
   starship init fish | source
+  direnv hook fish | source
   enable_transience
 end

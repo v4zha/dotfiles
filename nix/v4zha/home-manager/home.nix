@@ -7,6 +7,9 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = (pkg: true);
   programs.home-manager.enable = true;
+  programs = {
+    direnv.enable = true;
+  };
   home.packages = with pkgs;[
     waybar
     shotman
@@ -30,7 +33,6 @@
     starship
     librewolf
     kitty
-    direnv
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" "CascadiaCode" ];
     })
