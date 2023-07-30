@@ -25,8 +25,8 @@ local plugins = {
   { "ggandor/leap.nvim" },
   -- LSP & Treesitter
   { 'neovim/nvim-lspconfig' },
-  { "williamboman/mason.nvim" },
-  { "williamboman/mason-lspconfig.nvim" },
+  -- { "williamboman/mason.nvim" },
+  -- { "williamboman/mason-lspconfig.nvim" },
   { 'nvim-treesitter/nvim-treesitter' },
   { "jose-elias-alvarez/null-ls.nvim" },
   -- Rust --,
