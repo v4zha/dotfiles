@@ -33,6 +33,11 @@
     "https://cache.iog.io"
   ];
 
+  # Docker support
+  virtualisation.docker.enable = true;
+  virtualisation.docker.enableNvidia = true;
+  virtualisation.docker.storageDriver = "btrfs";
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
@@ -79,7 +84,7 @@
   users.users.v4zha = {
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = [ "wheel" "networkmanager" "audio" "video" ];
+    extraGroups = [ "wheel" "networkmanager" "audio" "video" "docker" ];
     packages = with pkgs; [ ];
   };
 

@@ -15,6 +15,7 @@ local plugins = {
   { "nvim-lualine/lualine.nvim" },
   { "nvim-telescope/telescope.nvim" },
   { "MunifTanjim/nui.nvim" },
+  { "rcarriga/nvim-notify"},
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
@@ -63,7 +64,17 @@ local plugins = {
   },
   -- haskell
   { "itchyny/vim-haskell-indent" },
+  --ui 
   -- {"stevearc/dressing.nvim" },
+{
+  "folke/noice.nvim",
+  event = "VeryLazy",
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
+    }
+}
+  
 }
 
 require("lazy").setup({ plugins })
