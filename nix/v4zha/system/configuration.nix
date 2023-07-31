@@ -25,12 +25,14 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Binary Cache for Haskell.nix
   nix.settings.trusted-public-keys = [
+    # Binary Cache for Haskell.nix
+    "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
     "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
   ];
   nix.settings.substituters = [
     "https://cache.iog.io"
+    "https://hyprland.cachix.org"
   ];
 
   # Docker support
@@ -45,6 +47,16 @@
     #keyMap = "us";
     useXkbConfig = true;
   };
+# Xdg service
+xdg = {
+  portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-gtk
+    ];
+  };
+};
 
   services = {
     # Enable the X11 windowing system.
@@ -75,6 +87,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    wireplumber.enable = true;
   };
   # Bluetooth
   hardware.bluetooth.enable = true;
