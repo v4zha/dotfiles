@@ -20,28 +20,13 @@ local whichmap = {
     name = "Debugger",
     b = { "<CMD> lua require('dap').toggle_breakpoint()<CR>", "Toggle BreakPoint" },
     c = { "<CMD> lua require('dap').clear_breakpoints()<CR>", "Clear BreakPoints" },
-    n = { "<CMD> lua require('dap').step_next()<CR>", "Step Next" },
     i = { "<CMD> lua require('dap').step_into()<CR>", "Step Into" },
     o = { "<CMD> lua require('dap').step_out()<CR>", "Step Out" },
+    r = { "<CMD> lua require('dap').repl.open()<CR>", "Open Repl" },
     k = { "<CMD> lua require('dap').continue()<CR>", "Continue" },
     l = { "<CMD> lua require('dap').run_last()<CR>", "Run Last" },
     e = { "<CMD> lua require('dap').terminate()<CR>", "terminate Debugger" },
 
-  },
-  p = {
-    name = "Packer",
-    c = { "<CMD>PackerCompile<CR>", "Compile" },
-    i = { "<CMD>PackerInstall<CR>", "Install" },
-    s = { "<CMD>PackerSync<CR>", "Sync" },
-    S = { "<CMD>PackerStatus<CR>", "Status" },
-    u = { "<CMD>PackerUpdate<CR>", "Update" }
-  },
-
-  h = {
-    name = "Hexokinase",
-    t = { "<CMD>HexokinaseToggle<CR>", "Toggle Hexokinase" },
-    f = { "<CMD>HexokinaseTurnOn<CR>", "Turn On Hexokinase" },
-    g = { "<CMD>HexokinaseTurnOff<CR>", "Turn Off Hexokinase" },
   },
   l = {
     name = "LSP",
