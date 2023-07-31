@@ -19,8 +19,14 @@ local whichmap = {
   d = {
     name = "Debugger",
     b = { "<CMD> lua require('dap').toggle_breakpoint()<CR>", "Toggle BreakPoint" },
+    c = { "<CMD> lua require('dap').clear_breakpoints()<CR>", "Clear BreakPoints" },
+    n = { "<CMD> lua require('dap').step_next()<CR>", "Step Next" },
+    i = { "<CMD> lua require('dap').step_into()<CR>", "Step Into" },
+    o = { "<CMD> lua require('dap').step_out()<CR>", "Step Out" },
     k = { "<CMD> lua require('dap').continue()<CR>", "Continue" },
     l = { "<CMD> lua require('dap').run_last()<CR>", "Run Last" },
+    e = { "<CMD> lua require('dap').terminate()<CR>", "terminate Debugger" },
+
   },
   p = {
     name = "Packer",

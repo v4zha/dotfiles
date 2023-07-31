@@ -63,7 +63,48 @@ dap.configurations.rust = {
   }
 }
 local dapui = require('dapui')
-dapui.setup()
+dapui.setup({
+  icons = { expanded = "▾", collapsed = "▸" },
+  mappings = {
+    open = "o",
+    remove = "d",
+    edit = "e",
+    repl = "r",
+    toggle = "t",
+  },
+  layouts = {
+    {
+      elements = {
+        "scopes",
+      },
+      size = 0.3,
+      position = "right"
+    },
+    {
+      elements = {
+        "repl",
+        "breakpoints"
+      },
+      size = 0.3,
+      position = "bottom",
+    },
+  },
+  floating = {
+    max_height = nil,
+    max_width = nil,
+    border = "single",
+    mappings = {
+      close = { "q", "<Esc>" },
+    },
+  },
+  windows = { indent = 1 },
+  render = {
+    max_type_length = nil,
+  },
+})
+
+vim.fn.sign_define('DapBreakpoint', { text = '', texthl = "DapBreakpoint" })
+vim.fn.sign_define('DapStopped', { text = '', texthl = "DapStopped" })
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
   dapui.open()
