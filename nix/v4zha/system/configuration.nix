@@ -18,7 +18,12 @@
 
   networking.hostName = "v4zha-nix";
   networking.networkmanager.enable = true;
-
+  # networking.wireless =
+  #   {
+  #     enable = true;
+  #     userControlled.enable = true;
+  #   };
+  #
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";
 
@@ -47,16 +52,16 @@
     #keyMap = "us";
     useXkbConfig = true;
   };
-# Xdg service
-xdg = {
-  portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-wlr
-      xdg-desktop-portal-gtk
-    ];
+  # Xdg service
+  xdg = {
+    portal = {
+      enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-wlr
+        xdg-desktop-portal-gtk
+      ];
+    };
   };
-};
 
   services = {
     # Enable the X11 windowing system.

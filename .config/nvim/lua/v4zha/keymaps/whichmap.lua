@@ -36,7 +36,6 @@ local whichmap = {
     w = { "<CMD>lua require('telescope.builtin').lsp_workspace_diagnostics()<CR>", "Workspace Diagnostics" },
     f = { "<CMD>lua vim.lsp.buf.format{async=true}<CR>", "Format" },
     i = { "<CMD>LspInfo<CR>", "Info" },
-    I = { "<CMD>Mason<CR>", "Mason Info" },
     j = { "<CMD>lua vim.lsp.diagnostic.goto_next()<CR>", "Next Diagnostic" },
     k = { "<CMD>lua vim.lsp.diagnostic.goto_prev()<CR>", "Prev Diagnostic" },
     l = { "<CMD>lua vim.lsp.codelens.run()<CR>", "CodeLens Action" },
