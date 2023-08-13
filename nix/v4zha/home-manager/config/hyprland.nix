@@ -71,7 +71,7 @@
     bind = $mainMod, RETURN, exec, kitty
     bind = $mainMod, w, killactive 
     bind = $mainMod, SPACE, togglefloating 
-    # Edekk ariyandu pani kittunnu : ) bind = $mainMod, x, exit 
+    bind = $mainMod, x, exec,dunstctl close-all 
     bind = $mainMod, c, exec,librewolf  
     bind = $mainMod, v, togglefloating 
     bind = $mainMod, f, fullscreen 

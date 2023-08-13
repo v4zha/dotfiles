@@ -45,6 +45,9 @@
     discord
     httpie
     zellij
+    obsidian
+    ghc
+    cabal-install
   ];
   programs.neovim.plugins = [
     (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [ p.bash p.c p.cpp p.cmake p.comment p.css p.cuda p.dockerfile p.fish p.gitignore p.go p.html p.haskell p.javascript p.json p.lua p.latex p.make p.markdown p.markdown_inline p.nix p.regex p.rust p.scss p.svelte p.toml p.tsx p.typescript p.vim p.yaml p.yuck p.zig ]))
