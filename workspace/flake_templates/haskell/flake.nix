@@ -4,6 +4,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     haskell-flake.url = "github:srid/haskell-flake";
+    my-package = "";
   };
   outputs = inputs@{ self, nixpkgs, flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
@@ -23,7 +24,7 @@
           };
         };
 
-        packages.default = self'.packages.<your-package-name>;
+        packages.default = self'.packages.${my-package};
       };
     };
 }
