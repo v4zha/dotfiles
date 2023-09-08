@@ -7,6 +7,8 @@
 
     # Execute your favorite apps at launch
     exec-once = waybar & hyprpaper & dunst
+    exec-once = wl-paste --type text --watch cliphist store #Stores only text data
+    exec-once = wl-paste --type image --watch cliphist store #Stores only image data
 
     # Source a file (multi-file configs)
     source = ~/.config/hypr/hyprui.conf
@@ -73,7 +75,8 @@
     bind = $mainMod, SPACE, togglefloating 
     bind = $mainMod, x, exec,dunstctl close-all 
     bind = $mainMod, c, exec,librewolf  
-    bind = $mainMod, v, togglefloating 
+    bind = SUPER, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
+    # bind = $mainMod, v, togglefloating 
     bind = $mainMod, f, fullscreen 
     bind = $mainMod, d, exec,pkill rofi || rofi -show drun
     bind = $mainMod, p, exec,librewolf -private-window  
