@@ -14,7 +14,7 @@ local lsp_servers = { 'clangd', {
         enable = false,
       },
     },
-},}, 'taplo', 'html', 'tsserver', 'cssls','hls', 'ocamllsp',
+},}, 'taplo', 'html', 'ts_ls', 'cssls','hls', 'ocamllsp','clangd',
   'pyright', 'dockerls', 'yamlls', 'rust_analyzer', 'zls', 'marksman','rnix'};
 
 return {

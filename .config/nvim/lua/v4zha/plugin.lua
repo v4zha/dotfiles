@@ -12,21 +12,23 @@ local plugins = {
   { "numToStr/Comment.nvim" },
   { "kyazdani42/nvim-web-devicons" },
 
-  { "nvim-lualine/lualine.nvim" },
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+  },
   { "nvim-telescope/telescope.nvim" },
   { "MunifTanjim/nui.nvim" },
   { "rcarriga/nvim-notify" },
   {
     "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
-    requires = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" }
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" }
   },
   { "ahmedkhalf/project.nvim" },
   { "ggandor/leap.nvim" },
   -- LSP & Treesitter
   { 'neovim/nvim-lspconfig' },
-  -- { "williamboman/mason.nvim" },
-  -- { "williamboman/mason-lspconfig.nvim" },
+  { "williamboman/mason.nvim" },
+  { "williamboman/mason-lspconfig.nvim" },
   { 'nvim-treesitter/nvim-treesitter' },
   { "jose-elias-alvarez/null-ls.nvim" },
   -- Rust --,
@@ -45,25 +47,29 @@ local plugins = {
   { "mfussenegger/nvim-dap" },
   {
     "rcarriga/nvim-dap-ui",
-    requires = { "mfussenegger/nvim-dap" }
+    dependencies = { "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio"
+    }
   },
   -- term and whichkey,
   { 'voldikss/vim-floaterm' },
-  { 'folke/which-key.nvim' },
+  { 'echasnovski/mini.nvim', version = false },
+  { 'folke/which-key.nvim' }
+  ,
   -- markdown
   -- { "ellisonleao/glow.nvim" },
-  {
-    "iamcco/markdown-preview.nvim",
-    build = "cd app && npm install",
-    setup = function()
-      vim.g.mkdp_filetypes = {
-        "markdown" }
-    end,
-    ft = {
-      "markdown" },
-  },
+  -- {
+  --   "iamcco/markdown-preview.nvim",
+  --   build = "cd app && npm install",
+  --   setup = function()
+  --     vim.g.mkdp_filetypes = {
+  --       "markdown" }
+  --   end,
+  --   ft = {
+  --     "markdown" },
+  -- },
   -- haskell
-  { "itchyny/vim-haskell-indent" },
+  -- { "itchyny/vim-haskell-indent" },
   --ui
   -- {"stevearc/dressing.nvim" },
   {

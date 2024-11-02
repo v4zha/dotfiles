@@ -2,8 +2,8 @@ local whichmap = {
   ["b"] = {
     "<CMD>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<CR>",
     "Buffers" },
-  ["e"] = { "<CMD>NeoTreeFocusToggle<CR>", "NvimTree" },
-  ["E"] = { "<CMD>NeoTreeFloatToggle<CR>", "NvimTree" },
+  ["e"] = { "<CMD>Neotree focus left toggle<CR>", "NvimTree" },
+  ["E"] = { "<CMD>Neotree focus float toggle<CR>", "NvimTree" },
   ["w"] = { "<CMD>w!<CR>", "Save" },
   ["q"] = { "<CMD>q!<CR>", "Quit" },
   ["c"] = { "<CMD>Noice dismiss<CR>", "clear Noice messages" },
