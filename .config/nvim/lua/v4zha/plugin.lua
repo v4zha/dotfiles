@@ -79,6 +79,9 @@ local plugins = {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
     }
+  },
+  {"lambdalisue/suda.vim",
+    lazy=false,
   }
 
 }

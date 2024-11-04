@@ -15,7 +15,7 @@ local whichmap = {
   ["g"] = { "<CMD>FloatermNew --height=0.8 --width=0.8 gitui<CR>", "GitUi" },
   ["m"] = { "<CMD>MarkdownPreviewToggle<CR>", "Markdown Preview" },
   ["t"] = { "<CMD>FloatermToggle --height=0.8 --width=0.8 <CR>", "Floaterm" },
-  ["v"] = { "<CMD>FloatermNew  --height=0.8 --width=0.8  vmod && $SHELL <CR>", "Vmod Loader" },
+  -- ["v"] = { "<CMD>FloatermNew  --height=0.8 --width=0.8  vmod && $SHELL <CR>", "Vmod Loader" },
   d = {
     name = "Debugger",
     b = { "<CMD> lua require('dap').toggle_breakpoint()<CR>", "Toggle BreakPoint" },
