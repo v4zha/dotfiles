@@ -30,7 +30,7 @@ local plugins = {
   { "williamboman/mason.nvim" },
   { "williamboman/mason-lspconfig.nvim" },
   { 'nvim-treesitter/nvim-treesitter' },
-  { "jose-elias-alvarez/null-ls.nvim" },
+  { "nvimtools/none-ls.nvim" },
   -- Rust --,
   { 'saecki/crates.nvim' },
   -- { 'simrat39/rust-tools.nvim' },
@@ -80,8 +80,16 @@ local plugins = {
       "rcarriga/nvim-notify",
     }
   },
-  {"lambdalisue/suda.vim",
-    lazy=false,
+  {
+    "lambdalisue/suda.vim",
+    lazy = false,
+  },
+  -- nushell
+  { 'LhKipp/nvim-nu' },
+  -- todo
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
   }
 
 }

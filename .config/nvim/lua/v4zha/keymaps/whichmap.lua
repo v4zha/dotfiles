@@ -9,7 +9,8 @@ local whichmap = {
     "<leader>f",
     "<CMD>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>",
     desc = "Find files"
-  }, {
+  }, {"<leader>F","<CMD>Telescope live_grep theme=ivy<CR>",desc="Live Grep"},
+  {
   { "<leader>d",  group = "Debugger" },
   { "<leader>db", "<CMD> lua require('dap').toggle_breakpoint()<CR>", desc = "Toggle BreakPoint" },
   { "<leader>dc", "<CMD> lua require('dap').clear_breakpoints()<CR>", desc = "Clear BreakPoints" },

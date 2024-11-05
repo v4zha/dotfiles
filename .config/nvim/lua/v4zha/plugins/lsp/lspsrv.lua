@@ -1,4 +1,6 @@
-local lsp_servers = { 'clangd', {
+local lsp_servers = { 'clangd',
+
+  {
   name='lua_ls',settings={
   Lua = {
       runtime = {
