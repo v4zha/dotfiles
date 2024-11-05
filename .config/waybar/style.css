@@ -50,7 +50,7 @@ tooltip {
   outline: 0;
 }
 
-#custom-language, #custom-updates, #custom-caffeine, #custom-power, #clock, #battery, #pulseaudio,#workspaces,#custom-nix, #network, #tray, #backlight {
+#custom-language, #custom-updates, #custom-caffeine, #custom-power, #clock, #battery, #pulseaudio,#workspaces,#custom-arch, #network, #tray, #backlight {
   background: #1F1F28;
   padding: 0px 10px;
   margin: 3px 0px;
@@ -65,7 +65,7 @@ tooltip {
   border-radius: 0px 10px 10px 0px;
 }
 
-#custom-nix{
+#custom-arch{
   border-radius: 10px 0px 0px 10px;
   color: #9CABCA;
   font-weight: bold;

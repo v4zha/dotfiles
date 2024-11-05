@@ -4,26 +4,23 @@
   "position": "top", 
   "height": 33,
   
-  "modules-left":   ["custom/nix","wlr/workspaces"],
-  "modules-center": ["clock"],
+  "modules-left":   ["custom/arch","hyprland/workspaces"],
+ // "modules-center": ["clock"],
   "modules-right":  ["tray", "network", "backlight", "pulseaudio","battery", "custom/power"],
 
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "disable-scroll": true,
-    "all-outputs": true,
-    "on-click": "activate",
-    "persistent_workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": [],
-      "9": [],
-      "10": []
-    },
+    "all-outputs": false,
+    "format":"{id}:{icon}",
+    "format-icons":{
+      "1":"",
+      "2":"󰈹",
+      "3":"",
+      "4":"",
+      "5":"󰎄",
+      "active": "",
+      "default": ""
+    }
   },
   "tray": {
     "icon-size": 13,
@@ -49,11 +46,10 @@
     "format-alt": "{time} {icon}",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
-  "clock": {
-   "format": "സമയം {: %I:%M %p   %d/%m}",
-   "format": "{: %I:%M %p   %d/%m}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-  },
+ // "clock": {
+// "format": "{: %I:%M %p   %d/%m}",
+//  "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+//},
   "network": {
     "format-wifi": "󰖩 {essid}",
     "format-ethernet": " {essid}",
@@ -96,8 +92,8 @@
     "format": "⏻",
     "on-click": "wlogout"
   },
-  "custom/nix":{
-    "format":"󱄅"
+  "custom/arch":{
+    "format":"󰣇"
   },
 }
 
