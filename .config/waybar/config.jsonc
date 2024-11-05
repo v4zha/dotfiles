@@ -5,8 +5,8 @@
   "height": 33,
   
   "modules-left":   ["custom/arch","hyprland/workspaces"],
- // "modules-center": ["clock"],
-  "modules-right":  ["tray", "network", "backlight", "pulseaudio","battery", "custom/power"],
+ "modules-center": ["clock"],
+  "modules-right":  ["tray", "network", "backlight","pulseaudio","battery", "custom/power"],
 
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -46,10 +46,9 @@
     "format-alt": "{time} {icon}",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
- // "clock": {
-// "format": "{: %I:%M %p   %d/%m}",
-//  "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-//},
+  "clock": {
+		"format": "󰥔 {:%H:%M    %d.%m.%Y}",
+	},
   "network": {
     "on-click":"iwgtk",
     "format-wifi": "󰖩 {essid}",
