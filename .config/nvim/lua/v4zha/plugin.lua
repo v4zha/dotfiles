@@ -52,7 +52,7 @@ local plugins = {
     }
   },
   -- term and whichkey,
-  { 'voldikss/vim-floaterm' },
+  -- { 'voldikss/vim-floaterm' },
   { 'echasnovski/mini.nvim', version = false },
   { 'folke/which-key.nvim' }
   ,

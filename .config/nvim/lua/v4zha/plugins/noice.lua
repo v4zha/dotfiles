@@ -20,6 +20,10 @@ require("noice").setup({
         kind = "",
         find = "written",
       },
+       {
+        view = "notify",
+        filter = { event = "msg_showmode" },
+      },
       opts = { skip = true },
     },
   },

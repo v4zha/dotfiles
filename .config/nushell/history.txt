@@ -1,0 +1,147 @@
+exit
+nvim ~/.config/
+chrh nu
+chsh nu
+exit
+config nu
+nvim ~/.config/nushell/
+cd ~
+nvim ~/.config/nushell/
+neovim
+exit
+cd ~
+bash
+$env | reject config | transpose key val | each {|r| echo $"$env.($r.key) = '($r.val)'"} | str join (char nl)
+ls
+cd ~/.config/
+cd nushell/
+nvim .
+$env.PATH = ($env.PATH | split row (char esep) | append '/some/path')
+echo $PATH
+echo $env.PATH
+ls
+ni env.nu
+$env.PATH = ($env.PATH | split row (char esep) | append '/some/path')$env.PATH = ($env.PATH | split row (char esep) | append '/opt/nvim-linux64/bin/nvim')
+$env.PATH = ($env.PATH | split row (char esep) | append '/opt/nvim-linux64/bin/nvim')
+nvim .
+nvim $env.PATH
+cat $env.PATH
+sudo chsh arvin -s bash
+sudo chsh arvin -s /bin/bash
+exit
+$nu.env-path
+nvim env.nu
+path add
+nvim env.nu
+$env.PATH = ($env.PATH | split row (char esep) | append '/opt/nvim-linux64/bin/nvim')
+cd .config
+cd ~/.config/nushell/
+nvim .
+$env.PATH = ($env.PATH | split row (char esep) | append '/opt/nvim-linux64/bin/nvim')
+nvim
+/opt/nvim-linux64/bin/nvim
+/opt/nvim-linux64/bin/nvim ~/.config/nushell/
+path add /opt/nvim-linux64/bin/nvim
+/opt/nvim-linux64/bin/nvim ~/.config/nushell/
+path add /opt/nvim-linux64/bin/nvim
+path --help
+/opt/nvim-linux64/bin/nvim ~/.config/nushell/
+nvim .
+cd ~
+ls
+nvim .
+/opt/nvim-linux64/bin/nvim ~/.config/nushell/
+$env.PATH = ($env.PATH | split row (char esep) | append '/opt/nvim-linux64/bin/nvim')
+nvim .
+$env.PATH
+cd ~
+$env.PATH = ($env.PATH | split row (char esep) | append '/opt/nvim-linux64/bin/nvim')
+$env.PATH
+nvim 
+$env | reject config | transpose key val | each {|r| echo $"$env.($r.key) = '($r.val)'"} | str join (char nl)
+exit
+zellij
+nvim
+exit
+zellij
+neovim
+vim
+vi
+exa
+exa -la
+rg
+cd .config/
+cd nvim/
+nvim
+explorer.exe .
+cd ~
+nvim .
+whoami
+vs
+htop
+exit
+exit
+ls
+exit
+zellij
+exit
+nvim .
+ls
+exit
+nvim
+whereis nvim
+echo $env.PATH
+cd ~
+nvim 
+bash
+nvim ~/.config/nvim
+nvim ~/.config/nvim/lua/v4zha/plugins/whichkey.lua
+nvim ~/.config/nvim
+nvim ~/.config/nvim/lua/v4zha/plugins/whichkey.lua
+cd ~
+ls
+cd downloads/
+ls
+rm -rf neovim/
+cd ~
+deoxide
+nvim ~/.config/nvim/lua/v4zha/plugins/whichkey.lua
+exit
+nvim ~/.config
+exit
+zellij
+ls
+cd downloads/
+ls
+cd ..
+la
+ls -la
+exa
+exa -la
+ls
+ls -la
+cat
+ls
+cd downloads/
+bat
+cat 
+ls -la
+cd ~/.config
+ls -la
+echo $env.SHELL
+ls -la
+ls
+htop
+exit
+nvim ~/.config
+nvim 
+ls
+cd nvim/
+ls
+nvim zellij/
+exit
+zellij sessions-list
+zellij -h
+exit
+zellij
+explorer.exe .

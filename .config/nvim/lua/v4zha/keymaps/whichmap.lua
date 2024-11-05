@@ -1,66 +1,52 @@
 local whichmap = {
-  ["b"] = {
-    "<CMD>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<CR>",
-    "Buffers" },
-  ["e"] = { "<CMD>Neotree focus left toggle<CR>", "NvimTree" },
-  ["E"] = { "<CMD>Neotree focus float toggle<CR>", "NvimTree" },
-  ["w"] = { "<CMD>w!<CR>", "Save" },
-  ["q"] = { "<CMD>q!<CR>", "Quit" },
-  ["c"] = { "<CMD>Noice dismiss<CR>", "clear Noice messages" },
-  -- ["c"] = { "<CMD>Bdelete!<CR>", "Close Buffer" },
-  ["f"] = {
+  { "leader<b>", "<CMD>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<CR>", desc = "Buffers" },
+  { "<leader>e", "<CMD>Neotree focus left toggle<CR>",                                                                             desc = "Neotree" },
+  { "<leader>E", "<CMD>Neotree focus float toggle<CR>",                                                                            desc = "Neotree Float" },
+  { "<leader>w", "<CMD>w!<CR>",                                                                                                    desc = "Save" },
+  { "<leader>q", "<CMD>q!<CR>",                                                                                                    desc = "Quit" },
+  { "<leader>c", "<CMD>Noice dismiss<CR>",                                                                                         desc = "clear Noice messages" },
+  {
+    "<leader>f",
     "<CMD>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>",
-    "Find files" },
-  ["F"] = { "<CMD>Telescope live_grep theme=ivy<CR>", "Live Grep" },
-  ["g"] = { "<CMD>FloatermNew --height=0.8 --width=0.8 gitui<CR>", "GitUi" },
-  ["m"] = { "<CMD>MarkdownPreviewToggle<CR>", "Markdown Preview" },
-  ["t"] = { "<CMD>FloatermToggle --height=0.8 --width=0.8 <CR>", "Floaterm" },
-  -- ["v"] = { "<CMD>FloatermNew  --height=0.8 --width=0.8  vmod && $SHELL <CR>", "Vmod Loader" },
-  d = {
-    name = "Debugger",
-    b = { "<CMD> lua require('dap').toggle_breakpoint()<CR>", "Toggle BreakPoint" },
-    c = { "<CMD> lua require('dap').clear_breakpoints()<CR>", "Clear BreakPoints" },
-    i = { "<CMD> lua require('dap').step_into()<CR>", "Step Into" },
-    o = { "<CMD> lua require('dap').step_out()<CR>", "Step Out" },
-    r = { "<CMD> lua require('dap').repl.open()<CR>", "Open Repl" },
-    k = { "<CMD> lua require('dap').continue()<CR>", "Continue" },
-    l = { "<CMD> lua require('dap').run_last()<CR>", "Run Last" },
-    e = { "<CMD> lua require('dap').terminate()<CR>", "terminate Debugger" },
+    desc = "Find files"
+  }, {
+  { "<leader>d",  group = "Debugger" },
+  { "<leader>db", "<CMD> lua require('dap').toggle_breakpoint()<CR>", desc = "Toggle BreakPoint" },
+  { "<leader>dc", "<CMD> lua require('dap').clear_breakpoints()<CR>", desc = "Clear BreakPoints" },
+  { "<leader>di", "<CMD> lua require('dap').step_into()<CR>",         desc = "Step Into" },
+  { "<leader>do", "<CMD> lua require('dap').step_out()<CR>",          desc = "Step Out" },
+  { "<leader>dr", "<CMD> lua require('dap').repl.open()<CR>",         desc = "Open Repl" },
+  { "<leader>dk", "<CMD> lua require('dap').continue()<CR>",          desc = "Continue" },
+  { "<leader>dl", "<CMD> lua require('dap').run_last()<CR>",          desc = "Run Last" },
+  { "<leader>de", "<CMD> lua require('dap').terminate()<CR>",         desc = "terminate Debugger" },
+}, {
+  { "<leader>l",  group = "LSP" },
+  { "<leader>la", "<CMD>lua vim.lsp.buf.code_action()<CR>",                                desc = "Code Action" },
+  { "<leader>lc", "<CMD>lua vim.lsp.buf.hover()<CR>",                                      desc = "Hover Actions" },
+  { "<leader>ld", "<CMD>lua require('telescope.builtin').lsp_document_diagnostics()<CR>",  desc = "Document Diagnostics" },
+  { "<leader>lw", "<CMD>lua require('telescope.builtin').lsp_workspace_diagnostics()<CR>", desc = "Workspace Diagnostics" },
+  { "<leader>lf", "<CMD>lua vim.lsp.buf.format{async=true}<CR>",                           desc = "Format" },
+  { "<leader>li", "<CMD>LspInfo<CR>",                                                      desc = "Info" },
+  { "<leader>lj", "<CMD>lua vim.lsp.diagnostic.goto_next()<CR>",                           desc = "Next Diagnostic" },
+  { "<leader>lk", "<CMD>lua vim.lsp.diagnostic.goto_prev()<CR>",                           desc = "Prev Diagnostic" },
+  { "<leader>ll", "<CMD>lua vim.lsp.codelens.run()<CR>",                                   desc = "CodeLens Action" },
+  { "<leader>lq", "<CMD>lua vim.lsp.diagnostic.set_loclist()<CR>",                         desc = "Quickfix" },
+  { "<leader>lr", "<CMD>lua vim.lsp.buf.rename()<CR>",                                     desc = "Rename" },
+  { "<leader>ls", "<CMD>Telescope lsp_document_symbols<CR>",                               desc = "Document Symbols" },
+  { "<leader>lS", "<CMD>Telescope lsp_dynamic_workspace_symbols<CR>",                      desc = "Workspace Symbols" },
 
-  },
-  l = {
-    name = "LSP",
-    a = { "<CMD>lua vim.lsp.buf.code_action()<CR>", "Code Action" },
-    c = { "<CMD>lua vim.lsp.buf.hover()<CR>", "Hover Actions" },
-    d = { "<CMD>lua require('telescope.builtin').lsp_document_diagnostics()<CR>", "Document Diagnostics" },
-    w = { "<CMD>lua require('telescope.builtin').lsp_workspace_diagnostics()<CR>", "Workspace Diagnostics" },
-    f = { "<CMD>lua vim.lsp.buf.format{async=true}<CR>", "Format" },
-    i = { "<CMD>LspInfo<CR>", "Info" },
-    j = { "<CMD>lua vim.lsp.diagnostic.goto_next()<CR>", "Next Diagnostic" },
-    k = { "<CMD>lua vim.lsp.diagnostic.goto_prev()<CR>", "Prev Diagnostic" },
-    l = { "<CMD>lua vim.lsp.codelens.run()<CR>", "CodeLens Action" },
-    q = { "<CMD>lua vim.lsp.diagnostic.set_loclist()<CR>", "Quickfix" },
-    r = { "<CMD>lua vim.lsp.buf.rename()<CR>", "Rename" },
-    s = { "<CMD>Telescope lsp_document_symbols<CR>", "Document Symbols" },
-    S = { "<CMD>Telescope lsp_dynamic_workspace_symbols<CR>", "Workspace Symbols" }
-  },
-  s = {
-    name = "Search",
-    b = { "<CMD>Telescope git_branches<CR>", "Checkout branch" },
-    c = { "<CMD>Telescope colorscheme<CR>", "Colorscheme" },
-    h = { "<CMD>Telescope help_tags<CR>", "Find Help" },
-    M = { "<CMD>Telescope man_pages<CR>", "Man Pages" },
-    r = { "<CMD>Telescope oldfiles<CR>", "Open Recent File" },
-    R = { "<CMD>Telescope registers<CR>", "Registers" },
-    k = { "<CMD>Telescope keymaps<CR>", "Keymaps" },
-    C = { "<CMD>Telescope commands<CR>", "Commands" }
-  },
-  -- r = {
-  --     name = "Rust",
-  --     a = {"<CMD>RustHoverActions<CR>", "RustHoverAction"}, -- HoverActions in Window : )
-  --     c = {"<CMD>RustCodeAction<CR>", "RustCodeAction"}, -- Code Action in Window : )
-  --     g = {"<CMD>RustViewCrateGraph<CR>", "CrateGraph"}
-  -- }
+}, {
+
+  { "<leader>s",  group = "Telescope" },
+  { "<leader>sb", "<CMD>Telescope git_branches<CR>", desc = "Checkout branch" },
+  { "<leader>sc", "<CMD>Telescope colorscheme<CR>",  desc = "Colorscheme" },
+  { "<leader>sh", "<CMD>Telescope help_tags<CR>",    desc = "Find Help" },
+  { "<leader>sM", "<CMD>Telescope man_pages<CR>",    desc = "Man Pages" },
+  { "<leader>sr", "<CMD>Telescope oldfiles<CR>",     desc = "Open Recent File" },
+  { "<leader>sR", "<CMD>Telescope registers<CR>",    desc = "Registers" },
+  { "<leader>sk", "<CMD>Telescope keymaps<CR>",      desc = "Keymaps" },
+  { "<leader>sC", "<CMD>Telescope commands<CR>",     desc = "Commands" },
+},
 }
 
 return {
