@@ -98,3 +98,4 @@ $env.NU_PLUGIN_DIRS = [
 # $env.PATH = ($env.PATH | uniq)
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
+$.env.EDITOR = 'nvim'

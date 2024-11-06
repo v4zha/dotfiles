@@ -147,6 +147,10 @@ let light_theme = {
 
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
+    alias ll = ls -l
+    alias la = ls -a
+    alias lla = ls -la
+    
     show_banner: false # true or false to enable or disable the welcome banner at startup
 
     ls: {
