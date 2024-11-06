@@ -57,17 +57,17 @@ local plugins = {
   { 'folke/which-key.nvim' }
   ,
   -- markdown
-  -- { "ellisonleao/glow.nvim" },
-  -- {
-  --   "iamcco/markdown-preview.nvim",
-  --   build = "cd app && npm install",
-  --   setup = function()
-  --     vim.g.mkdp_filetypes = {
-  --       "markdown" }
-  --   end,
-  --   ft = {
-  --     "markdown" },
-  -- },
+  { "ellisonleao/glow.nvim" },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
+
   -- haskell
   -- { "itchyny/vim-haskell-indent" },
   --ui
