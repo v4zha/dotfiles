@@ -136,10 +136,10 @@ require("neo-tree").setup({
   nesting_rules = {},
   filesystem = {
     filtered_items = {
-      visible = false, -- when true, they will just be displayed differently than normal items
-      hide_dotfiles = true,
-      hide_gitignored = true,
-      hide_hidden = true, -- only works on Windows for hidden files/directories
+      visible = true, -- when true, they will just be displayed differently than normal items
+      hide_dotfiles = false,
+      hide_gitignored = false,
+      hide_hidden = false, -- only works on Windows for hidden files/directories
       hide_by_name = {
         -- "node_modules"
       },
