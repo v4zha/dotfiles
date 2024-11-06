@@ -4,7 +4,9 @@ end
 
 if status --is-login
   if test (tty)=/dev/tty1
-    exec Hyprland
+    if not test -n "$TMUX"
+      exec Hyprland
+    end
   end
 end
 if status is-interactive
