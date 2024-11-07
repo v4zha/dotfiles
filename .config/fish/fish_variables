@@ -3,6 +3,7 @@
 SETUVAR EDITOR:nvim
 SETUVAR ELECTRON_OZONE_PLATFORM_HINT:wayland
 SETUVAR QT_QPA_PLATFORM:wayland
+SETUVAR QT_STYLE_OVERRIDE:kvantum
 SETUVAR XDG_CONFIG_HOME:/home/v4zha/\x2econfig
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_danhper_2F_fish_2D_ssh_2D_agent_files:\x7e/\x2econfig/fish/functions/__ssh_agent_is_started\x2efish\x1e\x7e/\x2econfig/fish/functions/__ssh_agent_start\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fish\x2dssh\x2dagent\x2efish
