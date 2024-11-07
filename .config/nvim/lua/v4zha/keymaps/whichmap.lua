@@ -9,18 +9,18 @@ local whichmap = {
     "<leader>f",
     "<CMD>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>",
     desc = "Find files"
-  }, {"<leader>F","<CMD>Telescope live_grep theme=ivy<CR>",desc="Live Grep"},
+  }, { "<leader>F", "<CMD>Telescope live_grep theme=ivy<CR>", desc = "Live Grep" },
   {
-  { "<leader>d",  group = "Debugger" },
-  { "<leader>db", "<CMD> lua require('dap').toggle_breakpoint()<CR>", desc = "Toggle BreakPoint" },
-  { "<leader>dc", "<CMD> lua require('dap').clear_breakpoints()<CR>", desc = "Clear BreakPoints" },
-  { "<leader>di", "<CMD> lua require('dap').step_into()<CR>",         desc = "Step Into" },
-  { "<leader>do", "<CMD> lua require('dap').step_out()<CR>",          desc = "Step Out" },
-  { "<leader>dr", "<CMD> lua require('dap').repl.open()<CR>",         desc = "Open Repl" },
-  { "<leader>dk", "<CMD> lua require('dap').continue()<CR>",          desc = "Continue" },
-  { "<leader>dl", "<CMD> lua require('dap').run_last()<CR>",          desc = "Run Last" },
-  { "<leader>de", "<CMD> lua require('dap').terminate()<CR>",         desc = "terminate Debugger" },
-}, {
+    { "<leader>d",  group = "Debugger" },
+    { "<leader>db", "<CMD> lua require('dap').toggle_breakpoint()<CR>", desc = "Toggle BreakPoint" },
+    { "<leader>dc", "<CMD> lua require('dap').clear_breakpoints()<CR>", desc = "Clear BreakPoints" },
+    { "<leader>di", "<CMD> lua require('dap').step_into()<CR>",         desc = "Step Into" },
+    { "<leader>do", "<CMD> lua require('dap').step_out()<CR>",          desc = "Step Out" },
+    { "<leader>dr", "<CMD> lua require('dap').repl.open()<CR>",         desc = "Open Repl" },
+    { "<leader>dk", "<CMD> lua require('dap').continue()<CR>",          desc = "Continue" },
+    { "<leader>dl", "<CMD> lua require('dap').run_last()<CR>",          desc = "Run Last" },
+    { "<leader>de", "<CMD> lua require('dap').terminate()<CR>",         desc = "terminate Debugger" },
+  }, {
   { "<leader>l",  group = "LSP" },
   { "<leader>la", "<CMD>lua vim.lsp.buf.code_action()<CR>",                                desc = "Code Action" },
   { "<leader>lc", "<CMD>lua vim.lsp.buf.hover()<CR>",                                      desc = "Hover Actions" },
@@ -48,6 +48,7 @@ local whichmap = {
   { "<leader>sk", "<CMD>Telescope keymaps<CR>",      desc = "Keymaps" },
   { "<leader>sC", "<CMD>Telescope commands<CR>",     desc = "Commands" },
 },
+
 }
 
 return {

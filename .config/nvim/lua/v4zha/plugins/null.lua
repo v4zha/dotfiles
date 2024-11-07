@@ -3,7 +3,7 @@ if not status then
   return
 end
 
-local src = { 
+local src = {
   null.builtins.formatting.black,
 }
 

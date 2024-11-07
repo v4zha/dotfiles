@@ -15,4 +15,7 @@ require("v4zha.plugins.glow")
 require("v4zha.plugins.comment")
 require("v4zha.plugins.noice")
 require("v4zha.plugins.minicons")
+require("v4zha.plugins.tmux")
 require("v4zha.plugins.todo")
+require("v4zha.plugins.orgmode")
+

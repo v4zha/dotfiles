@@ -4,7 +4,7 @@ if not status then
 end
 
 local function vscode()
-    return 'v4zha Studio Code Pro'
+    return 'V4zha Studio Code Pro'
 end
 
 
