@@ -8,7 +8,7 @@ local lsp_servers = { 'clangd',
           version = 'LuaJIT',
         },
         diagnostics = {
-          globals = { 'vim' },
+          globals = { 'vim' ,'vim.g'},
         },
         workspace = {
           library = vim.api.nvim_get_runtime_file("", true),
