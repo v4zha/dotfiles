@@ -1,0 +1,8 @@
+.git
+nix
+assets
+workspace
+flake.lock
+flake.nix
+LICENSE
+README.md
