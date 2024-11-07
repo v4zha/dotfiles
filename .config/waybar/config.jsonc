@@ -31,8 +31,8 @@
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
     "format-icons": ["󰃞","󰃟","󰃠"],
-    "on-scroll-up": "bash ~/.config/waybar/brightness up",
-    "on-scroll-down": "bash ~/.config/waybar/brightness down",
+    "on-scroll-up": "bash ~/.config/utils/brightness up",
+    "on-scroll-down": "bash ~/.config/utils/brightness down",
     "min-length": 6 
   },
   "battery": {

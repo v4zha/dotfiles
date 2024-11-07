@@ -1,0 +1,22 @@
+#!/bin/bash
+
+STEP_SIZE=1
+
+if [ -n "$2" ]; then
+  STEP_SIZE=$2
+fi
+
+if [ "$1" == "down" ]; then
+  max_b=$(brightnessctl max)
+  dec_percent=$((max_b / 100))
+  min_b=$((10 * dec_percent))
+  cur_b=$(brightnessctl get)
+  new_b=$((cur_b - STEP_SIZE * dec_percent))
+
+  if [ "$new_b" -ge "$min_b" ]; then
+    brightnessctl set "$new_b"
+  fi
+elif [ "$1" == "up" ]; then
+  brightnessctl set "+$STEP_SIZE%"
+fi
+
