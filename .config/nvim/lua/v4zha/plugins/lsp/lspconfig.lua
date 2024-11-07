@@ -30,17 +30,15 @@ for _, lsp_server in pairs(lsp_servers) do
   end
 end
 
-local signs = {
-  Error = "",
-  Warn = " ",
-  Hint = "󰋖",
-  Info = " "
+local s = vim.diagnostic.severity
+local text_sign = {
+  [s.ERROR] = "",
+  [s.WARN] = " ",
+  [s.INFO] = "󰋖",
+  [s.HINT] = " "
 }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, {
-    text = icon,
-    texthl = hl,
-    numhl = hl
-  })
-end
+
+vim.diagnostic.config {
+  signs = { text = text_sign },
+  underline = true,
+}

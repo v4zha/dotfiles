@@ -23,7 +23,6 @@ local plugins = {
     "nvim-neo-tree/neo-tree.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" }
   },
-  { "ahmedkhalf/project.nvim" },
   { "ggandor/leap.nvim" },
   -- LSP & Treesitter
   { 'neovim/nvim-lspconfig' },

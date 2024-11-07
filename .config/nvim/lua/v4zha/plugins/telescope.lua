@@ -10,7 +10,6 @@ telescope.setup({
     }
   }
 })
-telescope.load_extension('projects')
 telescope.load_extension('notify')
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', 'ff', builtin.find_files, {})
