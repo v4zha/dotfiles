@@ -3,7 +3,7 @@
 SETUVAR DOOMDIR:/home/v4zha/\x2econfig/doom
 SETUVAR EDITOR:nvim
 SETUVAR ELECTRON_OZONE_PLATFORM_HINT:wayland
-SETUVAR HYPRSHOT_DIR:/home/v4zha/pictures/screenshots
+SETUVAR HYPRSHOT_DIR:/home/v4zha/Pictures/screenshots
 SETUVAR QT_QPA_PLATFORM:wayland
 SETUVAR QT_STYLE_OVERRIDE:kvantum
 SETUVAR XDG_CONFIG_HOME:/home/v4zha/\x2econfig
