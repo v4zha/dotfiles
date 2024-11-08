@@ -4,7 +4,7 @@ local whichmap = {
   { "<leader>E", "<CMD>Neotree focus float toggle<CR>",                                                                            desc = "Neotree Float" },
   { "<leader>w", "<CMD>w!<CR>",                                                                                                    desc = "Save" },
   { "<leader>q", "<CMD>q!<CR>",                                                                                                    desc = "Quit" },
-  { "<leader>c", "<CMD>Noice dismiss<CR>",                                                                                         desc = "clear Noice messages" },
+  { "<leader>nc", "<CMD>Noice dismiss<CR>",                                                                                         desc = "clear Noice messages" },
   {
     "<leader>f",
     "<CMD>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>",
@@ -31,13 +31,19 @@ local whichmap = {
   { "<leader>lj", "<CMD>lua vim.lsp.diagnostic.goto_next()<CR>",                           desc = "Next Diagnostic" },
   { "<leader>lk", "<CMD>lua vim.lsp.diagnostic.goto_prev()<CR>",                           desc = "Prev Diagnostic" },
   { "<leader>ll", "<CMD>lua vim.lsp.codelens.run()<CR>",                                   desc = "CodeLens Action" },
-  { "<leader>lq", "<CMD>lua vim.lsp.diagnostic.set_loclist()<CR>",                         desc = "Quickfix" },
+  { "<leader>lq", "<CMD>lua vim.lsp.diagnostic.setloclist()<CR>",                          desc = "Quickfix" },
   { "<leader>lr", "<CMD>lua vim.lsp.buf.rename()<CR>",                                     desc = "Rename" },
   { "<leader>ls", "<CMD>Telescope lsp_document_symbols<CR>",                               desc = "Document Symbols" },
   { "<leader>lS", "<CMD>Telescope lsp_dynamic_workspace_symbols<CR>",                      desc = "Workspace Symbols" },
-
 }, {
-
+  { "<leader>x",  group = "Trouble" },
+  { "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>",                        desc = "Diagnostics (Trouble)" },
+  { "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",           desc = "Buffer Diagnostics (Trouble)" },
+  { "<leader>cs", "<cmd>Trouble symbols toggle focus=false<cr>",                desc = "Symbols (Trouble)" },
+  { "<leader>cl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", desc = "LSP Definitions / references / ... (Trouble)" },
+  { "<leader>xl", "<cmd>Trouble loclist toggle<cr>",                            desc = "Location List (Trouble)" },
+  { "<leader>xq", "<cmd>Trouble qflist toggle<cr>",                             desc = "Quickfix List (Trouble)" },
+}, {
   { "<leader>s",  group = "Telescope" },
   { "<leader>sb", "<CMD>Telescope git_branches<CR>", desc = "Checkout branch" },
   { "<leader>sc", "<CMD>Telescope colorscheme<CR>",  desc = "Colorscheme" },
