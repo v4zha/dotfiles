@@ -3,6 +3,8 @@
 This repository contains my personal dotfiles and configuration files of my NixOS system.The setup includes Hyprland as window manager and Waybar as the status bar, along with Rofi-Wayland as the application launcher and shell (fish).
 ![screen1](./assets/n1.png)
 ![screen2](./assets/n2.png)
+![screen3](./assets/n3.png)
+![screen4](./assets/n4.png)
 ## Installation
 
 To replicate this configuration on your NixOS system:
