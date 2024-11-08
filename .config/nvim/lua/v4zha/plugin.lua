@@ -5,7 +5,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
- { "lewis6991/impatient.nvim" },
+  { "lewis6991/impatient.nvim" },
   { "nvim-lua/plenary.nvim" },
   { "rebelot/kanagawa.nvim" },
   { "windwp/nvim-autopairs" },
@@ -30,9 +30,6 @@ local plugins = {
   { "williamboman/mason-lspconfig.nvim" },
   { 'nvim-treesitter/nvim-treesitter' },
   { "nvimtools/none-ls.nvim" },
-  {
-    "folke/trouble.nvim"
-  },
   -- Rust --,
   { 'saecki/crates.nvim' },
   -- { 'simrat39/rust-tools.nvim' },
@@ -45,6 +42,15 @@ local plugins = {
   { 'saadparwaiz1/cmp_luasnip' },
   { 'hrsh7th/cmp-buffer' },
   { 'hrsh7th/cmp-path' },
+  -- diagnostics and hover
+  {
+    "folke/trouble.nvim"
+  },
+  {
+    "Fildo7525/pretty_hover",
+    event = "LspAttach",
+    opts = {}
+  },
   -- Debugger
   { "mfussenegger/nvim-dap" },
   {
