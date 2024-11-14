@@ -11,6 +11,12 @@ end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+capabilities.textDocument.foldingRange = {
+  dynamicRegistration = false,
+  lineFoldingOnly = true
+}
+
+
 local function lsp_setup(lsp_server, settings)
   local opts = {
     flags = lsp_flags,

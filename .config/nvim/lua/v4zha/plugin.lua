@@ -42,6 +42,10 @@ local plugins = {
   { 'saadparwaiz1/cmp_luasnip' },
   { 'hrsh7th/cmp-buffer' },
   { 'hrsh7th/cmp-path' },
+  --fold
+  {
+    'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'
+  },
   -- diagnostics and hover
   {
     "folke/trouble.nvim"
@@ -75,7 +79,6 @@ local plugins = {
     end,
     ft = { "markdown" },
   },
-
   -- haskell
   -- { "itchyny/vim-haskell-indent" },
   --ui

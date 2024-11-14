@@ -18,5 +18,6 @@ require("v4zha.plugins.tmux")
 require("v4zha.plugins.todo")
 require("v4zha.plugins.orgmode")
 require("v4zha.plugins.trouble")
+require("v4zha.plugins.ufo")
 
 
