@@ -47,4 +47,5 @@ for k, v in pairs(config) do
 end
 
 vim.cmd("filetype plugin indent on")
+
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

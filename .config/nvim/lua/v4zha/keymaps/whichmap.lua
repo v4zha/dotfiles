@@ -53,6 +53,7 @@ local whichmap = {
   { "<leader>sR", "<CMD>Telescope registers<CR>",    desc = "Registers" },
   { "<leader>sk", "<CMD>Telescope keymaps<CR>",      desc = "Keymaps" },
   { "<leader>sC", "<CMD>Telescope commands<CR>",     desc = "Commands" },
+  { "<leader>ss", "<CMD>SessionSearch<CR>", desc = "Session Search" },
 },
 
 }
