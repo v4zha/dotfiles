@@ -20,7 +20,6 @@ vim.g.maplocalleader = ',';
 
 keymap("n", "<S-l>", ":bn<CR>")
 keymap("n", "<S-h>", ":bp<CR>")
-
 keymap("n", "<C-z>", ":redo<CR>")
 
 -- ==============================

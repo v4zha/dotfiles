@@ -1,5 +1,6 @@
 -- local rt = require("rust-tools")
 local crates = require("crates")
+crates.setup({})
 
 -- local extension_path = vim.env.HOME .. '/.vscode-server/extensions/vadimcn.vscode-lldb-1.9.2/'
 -- local codelldb_path = extension_path .. 'adapter/codelldb'
@@ -32,4 +33,3 @@ local crates = require("crates")
 --
 -- rt.setup(opts)
 --
-crates.setup()

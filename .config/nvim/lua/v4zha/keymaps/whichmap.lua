@@ -1,15 +1,12 @@
 local whichmap = {
-  { "leader<b>",  "<CMD>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<CR>", desc = "Buffers" },
-  { "<leader>e",  "<CMD>Neotree focus left toggle<CR>",                                                                             desc = "Neotree" },
-  { "<leader>E",  "<CMD>Neotree focus float toggle<CR>",                                                                            desc = "Neotree Float" },
-  { "<leader>w",  "<CMD>w!<CR>",                                                                                                    desc = "Save" },
-  { "<leader>q",  "<CMD>q!<CR>",                                                                                                    desc = "Quit" },
-  { "<leader>cc", "<CMD>nohlsearch | Noice dismiss<CR>",                                                                            desc = "clear Noice messages & Search Highlights" },
-  {
-    "<leader>f",
-    "<CMD>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>",
-    desc = "Find files"
-  }, { "<leader>F", "<CMD>Telescope live_grep theme=ivy<CR>", desc = "Live Grep" },
+  { "leader<b>",  "<CMD>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<CR>",    desc = "Buffers" },
+  { "<leader>e",  "<CMD>Neotree focus left toggle<CR>",                                                                                desc = "Neotree" },
+  { "<leader>E",  "<CMD>Neotree focus float toggle<CR>",                                                                               desc = "Neotree Float" },
+  { "<leader>w",  "<CMD>w!<CR>",                                                                                                       desc = "Save" },
+  { "<leader>q",  "<CMD>q!<CR>",                                                                                                       desc = "Quit" },
+  { "<leader>cc", "<CMD>nohlsearch | Noice dismiss<CR>",                                                                               desc = "clear Noice messages & Search Highlights" },
+  { "<leader>f",  "<CMD>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>", desc = "Find files" },
+  { "<leader>F",  "<CMD>Telescope live_grep theme=ivy<CR>",                                                                            desc = "Live Grep" },
   {
     { "<leader>d",  group = "Debugger" },
     { "<leader>db", "<CMD> lua require('dap').toggle_breakpoint()<CR>", desc = "Toggle BreakPoint" },
@@ -53,7 +50,7 @@ local whichmap = {
   { "<leader>sR", "<CMD>Telescope registers<CR>",    desc = "Registers" },
   { "<leader>sk", "<CMD>Telescope keymaps<CR>",      desc = "Keymaps" },
   { "<leader>sC", "<CMD>Telescope commands<CR>",     desc = "Commands" },
-  { "<leader>ss", "<CMD>SessionSearch<CR>", desc = "Session Search" },
+  { "<leader>ss", "<CMD>SessionSearch<CR>",          desc = "Session Search" },
 },
 
 }
