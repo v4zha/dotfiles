@@ -20,7 +20,7 @@ super + Return
 
 # program launcher
 super + d
-	rofi -modi drun -show drun -show-icons
+	rofi -kb-cancel 'Super_L+d' -modi drun -show drun -show-icons
 
 
 #file manager 
