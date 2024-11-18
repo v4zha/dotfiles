@@ -1,5 +1,5 @@
 local whichmap = {
-  { "leader<b>",  "<CMD>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<CR>",    desc = "Buffers" },
+  { "<leader>b",  "<CMD>Telescope buffers<CR>",                                                                                        desc = "Buffers" },
   { "<leader>e",  "<CMD>Neotree focus left toggle<CR>",                                                                                desc = "Neotree" },
   { "<leader>E",  "<CMD>Neotree focus float toggle<CR>",                                                                               desc = "Neotree Float" },
   { "<leader>w",  "<CMD>w!<CR>",                                                                                                       desc = "Save" },
