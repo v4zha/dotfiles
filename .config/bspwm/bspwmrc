@@ -23,8 +23,5 @@ picom &
 polybar vbar -r --config=$HOME/.config/polybar/config.ini &
 
 bspc config normal_border_color  "#363646"
-bspc config active_border_color  "#938AA9g
+bspc config active_border_color  "#938AA9G"
 bspc config focused_border_color "#938AA9"
-
-kitty
-
