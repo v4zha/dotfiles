@@ -10,6 +10,10 @@ super + c
 	firefox
 
 
+#emacs
+super + E
+  emacs
+
 #incongito
 super + p
 	firefox --private-window
