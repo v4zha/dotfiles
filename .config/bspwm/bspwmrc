@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d term web zoho emacs read work misc extra
+bspc monitor -d term web work emacs read zoho misc extra
 
 bspc config border_width        2 
 bspc config window_gap          10
@@ -19,12 +19,11 @@ bspc rule -a firefox desktop=web follow=on
 bspc rule -a zathura desktop=read follow=on
 bspc rule -a code desktop=work follow=on
 bspc rule -a Ulaa-browser desktop=zoho follow=on
- bspc rule -a Emacs state=tiled desktop=emacs follow=on
+ bspc rule -a Emacs state=fullscreen desktop=emacs follow=on
 
 feh --bg-scale  /home/arvin-ts406/wallpapers/w2.png &
 picom &
 polybar vbar -r --config=$HOME/.config/polybar/config.ini &
-
 
 # startup applications
 xargs -a $HOME/.config/bspwm/zoho_urls.txt  firefox --new-tab "$line" &  
