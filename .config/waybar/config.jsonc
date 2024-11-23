@@ -51,7 +51,7 @@
 		"format": "󰥔 {:%H:%M    %d.%m.%Y}",
 	},
   "network": {
-    "on-click":"iwgtk",
+    "on-click":"nm-applet",
     "format-wifi": "󰖩 {essid}",
     "format-ethernet": " {essid}",
     "format-linked": "{ifname} (No IP) ",
