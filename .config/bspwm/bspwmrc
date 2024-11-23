@@ -26,8 +26,8 @@ picom &
 polybar vbar -r --config=$HOME/.config/polybar/config.ini &
 
 # startup applications
-xargs -a $HOME/.config/bspwm/zoho_urls.txt  firefox --new-tab "$line" &  
-emacs --daemon &
+pkill firefox 
+xargs -a $HOME/.config/bspwm/zoho_urls.txt  firefox --new-tab "$line" &  emacs --daemon &
 
 bspc config normal_border_color  "#363646"
 bspc config active_border_color  "#938AA9G"

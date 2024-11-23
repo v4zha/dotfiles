@@ -15,7 +15,7 @@ super + E
   emacs
 
 #incongito
-super + p
+super + C
 	firefox --private-window
 
 #terminal emulator
@@ -36,7 +36,7 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 #
-n# bspwm hotkeys
+# bspwm hotkeys
 #
 
 # quit/restart bspwm
@@ -80,12 +80,12 @@ super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # "focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+# super + {p,b,comma,period}
+# 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
+# super + {_,shift + }c
+# 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -130,7 +130,7 @@ super + ctrl + shift + space
 #
 
 # expand a window by moving one of its side outward
-super + alt + {h,j,k,DCl}
+super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
@@ -144,6 +144,10 @@ super + {Left,Down,Up,Right}
 #brightness
 XF86MonBrightness{Up,Down}
  brightnessctl set {+5%,5%-} &
+
+#bspc move desktop
+super + {n,p}
+  bspc desktop -f {prev,next}
 
 
 #Audio 

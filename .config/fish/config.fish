@@ -14,3 +14,10 @@ if status is-interactive
   direnv hook fish | source
   enable_transience
 end
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'micromamba shell init' !!
+set -gx MAMBA_EXE "/home/arvin-ts406/.local/bin/micromamba"
+set -gx MAMBA_ROOT_PREFIX "/home/arvin-ts406/micromamba"
+$MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
+# <<< mamba initialize <<<
