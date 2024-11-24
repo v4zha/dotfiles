@@ -9,10 +9,5 @@ telescope.setup({
       sorter = "get_fuzzy_file"
     }
   },
-  mapping = {
-    n = {
-      ['<c-d>'] = require('telescope.actions').delete_buffer
-    }
-  }
 })
 telescope.load_extension('notify')
