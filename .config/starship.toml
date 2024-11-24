@@ -84,11 +84,13 @@ $os\
 $container\
 $shell\
 $character"""
+
 [character]
 success_symbol = '[󰳆 >](bold green)'
 
 [line_break]
 disabled = true
+
 [aws]
 symbol = "  "
 
@@ -99,13 +101,16 @@ symbol = " "
 symbol = " "
 
 [conda]
-symbol = " "
+symbol = " "
 
 [dart]
 symbol = " "
 
 [directory]
 read_only = " 󰌾"
+truncation_length = 2
+truncation_symbol = "../"
+
 
 [docker_context]
 symbol = " "
