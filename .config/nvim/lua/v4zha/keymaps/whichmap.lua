@@ -1,5 +1,4 @@
 local whichmap = {
-  { "<leader>b",  "<CMD>Telescope buffers<CR>",                                                                                        desc = "Buffers" },
   { "<leader>e",  "<CMD>Neotree focus left toggle<CR>",                                                                                desc = "Neotree" },
   { "<leader>E",  "<CMD>Neotree focus float toggle<CR>",                                                                               desc = "Neotree Float" },
   { "<leader>w",  "<CMD>w!<CR>",                                                                                                       desc = "Save" },
@@ -7,6 +6,12 @@ local whichmap = {
   { "<leader>cc", "<CMD>nohlsearch | Noice dismiss<CR>",                                                                               desc = "clear Noice messages & Search Highlights" },
   { "<leader>f",  "<CMD>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>", desc = "Find files" },
   { "<leader>F",  "<CMD>Telescope live_grep theme=ivy<CR>",                                                                            desc = "Live Grep" },
+  {
+    { "<leader>b", group = "Buffers" },
+    { "<leader>bb", "<CMD> Telescope buffers<CR>", desc = "List Buffers" },
+    { "<leader>bd", ":bd<CR>", desc = "Delete current buffer" },
+
+  },
   {
     { "<leader>d",  group = "Debugger" },
     { "<leader>db", "<CMD> lua require('dap').toggle_breakpoint()<CR>", desc = "Toggle BreakPoint" },

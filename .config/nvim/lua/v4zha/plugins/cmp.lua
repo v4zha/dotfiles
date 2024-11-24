@@ -4,16 +4,9 @@ if not status then
 end
 
 
-local snip_status_ok, luasnip = pcall(require, "luasnip")
-if not snip_status_ok then
+local snip_status, luasnip = pcall(require, "luasnip")
+if not snip_status then
   return
-end
-
-require("luasnip/loaders/from_vscode").lazy_load()
-
-local check_backspace = function()
-  local col = vim.fn.col "." - 1
-  return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
 local kind_icons = {
@@ -44,6 +37,9 @@ local kind_icons = {
   TypeParameter = "t"
 }
 
+
+require("luasnip.loaders.from_vscode").lazy_load()
+
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -61,31 +57,39 @@ cmp.setup {
       i = cmp.mapping.abort(),
       c = cmp.mapping.close()
     },
-    ["<CR>"] = cmp.mapping.confirm {
-      select = true
-    },
+    ['<CR>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        if luasnip.expandable() then
+          luasnip.expand()
+        else
+          cmp.confirm({
+            select = true,
+          })
+        end
+      else
+        fallback()
+      end
+    end),
+
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      elseif luasnip.expandable() then
-        luasnip.expand()
-      elseif luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      elseif check_backspace() then
-        fallback()
+      elseif luasnip.locally_jumpable(1) then
+        luasnip.jump(1)
       else
         fallback()
       end
     end, { "i", "s" }),
+
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
+      elseif luasnip.locally_jumpable(-1) then
         luasnip.jump(-1)
       else
         fallback()
       end
-    end, { "i", "s" })
+    end, { "i", "s" }),
   },
   formatting = {
     fields = { "kind", "abbr", "menu" },
@@ -95,7 +99,8 @@ cmp.setup {
         nvim_lsp = "[LSP]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
-        path = "[Path]"
+        path = "[Path]",
+        orgmode = "[Org]"
       })[entry.source.name]
       return vim_item
     end
@@ -111,17 +116,32 @@ cmp.setup {
   },
     { name = "orgmode" }
   },
-  confirm_opts = {
-    behavior = cmp.ConfirmBehavior.Replace,
-    select = false
-  },
   window = {
     documentation = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }
     }
   },
-  experimental = {
-    ghost_text = false,
-    native_menu = false
-  }
 }
+
+cmp.setup.cmdline({ '/', '?' }, {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = 'buffer' }
+  }
+})
+
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+    { name = 'cmdline' }
+  }),
+  matching = { disallow_symbol_nonprefix_matching = false }
+})
+
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+cmp.event:on(
+  'confirm-done',
+  cmp_autopairs.on_confirm_done()
+)

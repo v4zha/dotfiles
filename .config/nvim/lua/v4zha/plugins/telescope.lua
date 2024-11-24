@@ -8,6 +8,11 @@ telescope.setup({
       theme = "get_dropdown",
       sorter = "get_fuzzy_file"
     }
+  },
+  mapping = {
+    n = {
+      ['<c-d>'] = require('telescope.actions').delete_buffer
+    }
   }
 })
 telescope.load_extension('notify')
