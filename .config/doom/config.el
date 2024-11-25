@@ -79,5 +79,7 @@
 (setq doom-theme 'catppuccin)
 (setq catppuccin-flavor 'mocha) 
 
+(setq fancy-splash-image (concat doom-private-dir "doomEmacs.svg"))
+
 (setq doom-leader-key ","
       doom-localleader-key ",")
