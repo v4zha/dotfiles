@@ -26,6 +26,10 @@ super + Return
 super + d
 	rofi -kb-cancel 'Super_L+d' -modi drun -show drun -show-icons
 
+# clear all dunst msgs
+super + x
+  dunstctl close all
+
 
 #file manager 
 super + e

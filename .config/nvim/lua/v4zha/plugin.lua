@@ -33,11 +33,21 @@ local plugins = {
   { 'saecki/crates.nvim' },
   -- { 'simrat39/rust-tools.nvim' },
   -- cmp & Snippet
-  { 'hrsh7th/cmp-nvim-lsp' },
-  { 'hrsh7th/cmp-buffer' },
-  { 'hrsh7th/cmp-path' },
-  { 'hrsh7th/cmp-cmdline' },
-  { 'hrsh7th/nvim-cmp' },
+  -- { 'hrsh7th/cmp-nvim-lsp' },
+  -- { 'hrsh7th/cmp-buffer' },
+  -- { 'hrsh7th/cmp-path' },
+  -- { 'hrsh7th/cmp-cmdline' },
+  -- { 'hrsh7th/nvim-cmp' },
+
+  { --* the completion engine *--
+    "iguanacucumber/magazine.nvim",
+    name = "nvim-cmp",
+  },
+  { "iguanacucumber/mag-nvim-lsp",                   name = "cmp-nvim-lsp", opts = {} },
+  { "iguanacucumber/mag-nvim-lua",                   name = "cmp-nvim-lua" },
+  { "iguanacucumber/mag-buffer",                     name = "cmp-buffer" },
+  { "iguanacucumber/mag-cmdline",                    name = "cmp-cmdline" },
+  { "https://codeberg.org/FelipeLema/cmp-async-path" },
   { 'L3MON4D3/LuaSnip' },
   {
     "L3MON4D3/LuaSnip",

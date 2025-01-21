@@ -3,7 +3,6 @@ if not status then
   return
 end
 
-
 local snip_status, luasnip = pcall(require, "luasnip")
 if not snip_status then
   return
@@ -112,7 +111,7 @@ cmp.setup {
   }, {
     name = "buffer"
   }, {
-    name = "path"
+    name = "async_path"
   },
     { name = "orgmode" }
   },
