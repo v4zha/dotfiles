@@ -1,9 +1,13 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export ANDROID_AVD_HOME:/home/v4zha/\x2eandroid/avd
+SETUVAR --export ANDROID_HOME:/home/v4zha/Android/Sdk
+SETUVAR --export ANDROID_SDK_ROOT:/home/v4zha/Android/Sdk
 SETUVAR DOOMDIR:/home/v4zha/\x2econfig/doom
 SETUVAR EDITOR:nvim
 SETUVAR ELECTRON_OZONE_PLATFORM_HINT:wayland
 SETUVAR HYPRSHOT_DIR:/home/v4zha/Pictures/screenshots
+SETUVAR --export --path PATH:/opt/android\x2dsdk/platform\x2dtools\x1e/opt/android\x2dsdk/tools\x1e/home/arvin\x2dts406/\x2econfig/emacs/bin\x1e/home/v4zha/\x2elocal/bin\x1e/home/v4zha/\x2econfig/emacs/bin\x1e/usr/local/bin\x1e/home/v4zha/\x2ecargo/bin\x1e/usr/local/sbin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/opt/android\x2dsdk/platform\x2dtools
 SETUVAR QT_QPA_PLATFORM:wayland
 SETUVAR QT_QPA_PLATFORMTHEME:qt5ct
 SETUVAR QT_QPA_PLATFORM_THEME:qt5ct
@@ -58,4 +62,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/arvin\x2dts406/\x2econfig/emacs/bin\x1e/home/v4zha/\x2elocal/bin\x1e/home/v4zha/\x2econfig/emacs/bin\x1e/usr/local/bin
+SETUVAR fish_user_paths:/home/v4zha/Android/Sdk/cmdline\x2dtools/latest/bin\x1e/home/v4zha/Android/Sdk/platform\x2dtools\x1e/home/v4zha/Android/Sdk/emulator\x1e/opt/android\x2dsdk/platform\x2dtools\x1e/opt/android\x2dsdk/tools\x1e/home/arvin\x2dts406/\x2econfig/emacs/bin\x1e/home/v4zha/\x2elocal/bin\x1e/home/v4zha/\x2econfig/emacs/bin\x1e/usr/local/bin
