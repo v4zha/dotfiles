@@ -22,3 +22,5 @@ set -gx MAMBA_EXE "/home/v4zha/.local/bin/micromamba"
 set -gx MAMBA_ROOT_PREFIX "/home/v4zha/micromamba"
 $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
 # <<< mamba initialize <<<
+
+fish_add_path /home/v4zha/.spicetify

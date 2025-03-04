@@ -15,7 +15,7 @@ SETUVAR QT_STYLE_OVERRIDE:kvantum
 SETUVAR VISUAL:nvim
 SETUVAR XDG_CONFIG_HOME:/home/v4zha/\x2econfig
 SETUVAR _JAVA_AWT_WM_NONREPARENTING:1
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3800
 SETUVAR _fisher_danhper_2F_fish_2D_ssh_2D_agent_files:\x7e/\x2econfig/fish/functions/__ssh_agent_is_started\x2efish\x1e\x7e/\x2econfig/fish/functions/__ssh_agent_start\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fish\x2dssh\x2dagent\x2efish
 SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
@@ -42,7 +42,7 @@ SETUVAR fish_color_option:\x1d
 SETUVAR fish_color_param:FF79C6
 SETUVAR fish_color_quote:F1FA8C
 SETUVAR fish_color_redirection:8BE9FD
-SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_search_match:white\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
@@ -62,4 +62,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/v4zha/Android/Sdk/cmdline\x2dtools/latest/bin\x1e/home/v4zha/Android/Sdk/platform\x2dtools\x1e/home/v4zha/Android/Sdk/emulator\x1e/opt/android\x2dsdk/platform\x2dtools\x1e/opt/android\x2dsdk/tools\x1e/home/arvin\x2dts406/\x2econfig/emacs/bin\x1e/home/v4zha/\x2elocal/bin\x1e/home/v4zha/\x2econfig/emacs/bin\x1e/usr/local/bin
+SETUVAR fish_user_paths:/home/v4zha/\x2espicetify\x1e/home/v4zha/Android/Sdk/cmdline\x2dtools/latest/bin\x1e/home/v4zha/Android/Sdk/platform\x2dtools\x1e/home/v4zha/Android/Sdk/emulator\x1e/opt/android\x2dsdk/platform\x2dtools\x1e/opt/android\x2dsdk/tools\x1e/home/arvin\x2dts406/\x2econfig/emacs/bin\x1e/home/v4zha/\x2elocal/bin\x1e/home/v4zha/\x2econfig/emacs/bin\x1e/usr/local/bin
