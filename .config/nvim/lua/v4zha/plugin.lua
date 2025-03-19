@@ -59,15 +59,6 @@ local plugins = {
   {
     'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'
   },
-  -- diagnostics and hover
-  {
-    "folke/trouble.nvim"
-  },
-  {
-    "Fildo7525/pretty_hover",
-    event = "LspAttach",
-    opts = {}
-  },
   -- Debugger
   { "mfussenegger/nvim-dap" },
   {
@@ -115,31 +106,11 @@ local plugins = {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
-  --orgmode
-  {
-    'nvim-orgmode/orgmode',
-    event = 'VeryLazy',
-    ft = { 'org' }
-  },
   --tmux
   {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
-  --sessions
-  {
-    'rmagatti/auto-session',
-    lazy = false,
-
-    ---enables autocomplete for opts
-    ---@module "auto-session"
-    ---@type AutoSession.Config
-    opts = {
-      suppressed_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
-      -- log_level = 'debug',
-    }
-  }
-
 }
 
 require("lazy").setup({ plugins })
