@@ -25,5 +25,5 @@ $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
 
 alias ls "exa"
 alias la "exa --long --all"
-
+alias cat "bat"
 fish_add_path /home/v4zha/.spicetify
