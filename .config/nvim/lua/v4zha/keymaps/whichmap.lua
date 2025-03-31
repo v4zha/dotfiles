@@ -20,7 +20,7 @@ local whichmap = {
   }, {
   { "<leader>l",  group = "LSP" },
   { "<leader>la", "<CMD>lua vim.lsp.buf.code_action()<CR>",                                desc = "Code Action" },
-  { "<leader>lc", "<CMD>lua require('pretty_hover').hover()<CR>",                          desc = "Hover Actions" },
+  { "<leader>lc", "<CMD>lua vim.lsp.buf.hover()<CR>",                          desc = "Hover Actions" },
   { "<leader>ld", "<CMD>lua require('telescope.builtin').lsp_document_diagnostics()<CR>",  desc = "Document Diagnostics" },
   { "<leader>lw", "<CMD>lua require('telescope.builtin').lsp_workspace_diagnostics()<CR>", desc = "Workspace Diagnostics" },
   { "<leader>lf", "<CMD>lua vim.lsp.buf.format{async=true}<CR>",                           desc = "Format" },

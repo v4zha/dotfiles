@@ -20,7 +20,7 @@ local lsp_servers = { 'clangd',
     },
   },
   'cmake', 'taplo', 'hls', 'ocamllsp', 'clangd','basedpyright',
-  'dockerls', 'yamlls', 'rust_analyzer', 'zls', 'marksman', 'rnix' };
+  'dockerls', 'yamlls', 'rust_analyzer', 'zls', 'marksman', 'rnix' , 'jdtls'};
 
 return {
   lsp_servers = lsp_servers
