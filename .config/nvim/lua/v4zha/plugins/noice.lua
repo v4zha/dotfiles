@@ -5,6 +5,11 @@ require("noice").setup({
       ["vim.lsp.util.stylize_markdown"] = true,
       ["cmp.entry.get_documentation"] = true,
     },
+      hover={enabled=false,
+      },
+      signature={
+        auto_open=false,
+      },
   },
   presets = {
     bottom_search = true,
