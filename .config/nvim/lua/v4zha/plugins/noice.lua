@@ -5,11 +5,8 @@ require("noice").setup({
       ["vim.lsp.util.stylize_markdown"] = true,
       ["cmp.entry.get_documentation"] = true,
     },
-      hover={enabled=false,
-      },
-      signature={
-        auto_open=false,
-      },
+    hover = { enabled = false },
+    signature = { auto_open = false },
   },
   presets = {
     bottom_search = true,
@@ -25,11 +22,11 @@ require("noice").setup({
         kind = "",
         find = "written",
       },
-      {
-        view = "notify",
-        filter = { event = "msg_showmode" },
-      },
       opts = { skip = true },
+    },
+    {
+      view = "notify",
+      filter = { event = "msg_showmode" },
     },
   },
 })

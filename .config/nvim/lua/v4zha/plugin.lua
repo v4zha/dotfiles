@@ -31,13 +31,6 @@ local plugins = {
   { "nvimtools/none-ls.nvim" },
   -- Rust --,
   { 'saecki/crates.nvim' },
-  -- { 'simrat39/rust-tools.nvim' },
-  -- cmp & Snippet
-  -- { 'hrsh7th/cmp-nvim-lsp' },
-  -- { 'hrsh7th/cmp-buffer' },
-  -- { 'hrsh7th/cmp-path' },
-  -- { 'hrsh7th/cmp-cmdline' },
-  -- { 'hrsh7th/nvim-cmp' },
 
   { --* the completion engine *--
     "iguanacucumber/magazine.nvim",
@@ -68,7 +61,6 @@ local plugins = {
     }
   },
   -- term and whichkey,
-  -- { 'voldikss/vim-floaterm' },
   { 'echasnovski/mini.nvim', version = false },
   { 'folke/which-key.nvim' }
   ,
@@ -83,10 +75,6 @@ local plugins = {
     end,
     ft = { "markdown" },
   },
-  -- haskell
-  -- { "itchyny/vim-haskell-indent" },
-  --ui
-  -- {"stevearc/dressing.nvim" },
   {
     "folke/noice.nvim",
     event = "VeryLazy",
@@ -95,6 +83,7 @@ local plugins = {
       "rcarriga/nvim-notify",
     }
   },
+  { "folke/trouble.nvim" },
   {
     "lambdalisue/suda.vim",
     lazy = false,
