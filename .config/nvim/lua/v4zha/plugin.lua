@@ -48,10 +48,6 @@ local plugins = {
     dependencies = { "rafamadriz/friendly-snippets" },
   },
   { 'saadparwaiz1/cmp_luasnip' },
-  --fold
-  {
-    'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'
-  },
   -- Debugger
   { "mfussenegger/nvim-dap" },
   {
