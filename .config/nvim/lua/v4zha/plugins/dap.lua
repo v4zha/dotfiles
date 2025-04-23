@@ -8,9 +8,7 @@ dap.adapters.lldb = {
 
 dap.adapters.python = function(cb, config)
   if config.request == 'attach' then
-    ---@diagnostic disable-next-line: undefined-field
     local port = (config.connect or config).port
-    ---@diagnostic disable-next-line: undefined-field
     local host = (config.connect or config).host or '127.0.0.1'
     cb({
       type = 'server',
@@ -55,6 +53,17 @@ dap.configurations.rust = {
     type = 'lldb',
     request = 'launch',
     program = function()
+      local cargo_toml = io.open("Cargo.toml", "r")
+      if cargo_toml then
+        for line in cargo_toml:lines() do
+          local name = line:match('^name%s*=%s*["\'](.-)["\']')
+          if name then
+            cargo_toml:close()
+            return vim.fn.getcwd() .. "/target/debug/" .. name
+          end
+        end
+        cargo_toml:close()
+      end
       return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
     end,
     cwd = '${workspaceFolder}',
@@ -63,10 +72,8 @@ dap.configurations.rust = {
     runInTerminal = false,
     initCommands = function()
       local rustc_sysroot = vim.fn.trim(vim.fn.system('rustc --print sysroot'))
-
       local script_import = 'command script import "' .. rustc_sysroot .. '/lib/rustlib/etc/lldb_lookup.py"'
       local commands_file = rustc_sysroot .. '/lib/rustlib/etc/lldb_commands'
-
       local commands = {}
       local file = io.open(commands_file, 'r')
       if file then
@@ -76,7 +83,6 @@ dap.configurations.rust = {
         file:close()
       end
       table.insert(commands, 1, script_import)
-
       return commands
     end,
     env = function()
@@ -94,8 +100,6 @@ dap.configurations.python = {
     type = 'python',
     request = 'launch',
     name = "Launch file",
-
-
     program = "${file}",
     pythonPath = function()
       local cwd = vim.fn.getcwd()
@@ -111,7 +115,7 @@ dap.configurations.python = {
 }
 
 local dapui = require('dapui')
-dapui.setup();
+dapui.setup()
 
 vim.fn.sign_define('DapBreakpoint', { text = '', texthl = "DapBreakpoint" })
 vim.fn.sign_define('DapStopped', { text = '', texthl = "DapStopped" })
