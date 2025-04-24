@@ -16,8 +16,6 @@ local plugins = {
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
   { "nvim-telescope/telescope.nvim" },
-  { "MunifTanjim/nui.nvim" },
-  { "rcarriga/nvim-notify" },
   {
     "nvim-neo-tree/neo-tree.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" }
