@@ -65,17 +65,15 @@ local plugins = {
   {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    build = "cd app && yarn install",
-    init = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-    end,
+    build = ':call mkdp#util#install()',
     ft = { "markdown" },
   },
   {
     "folke/noice.nvim",
     event = "VeryLazy",
     dependencies = {
-      "MunifTanjim/nui.nvim",
+      -- "MunifTanjim/nui.nvim",
+      { "pynappo/nui.nvim", branch = "support-winborder" },
       "rcarriga/nvim-notify",
     }
   },
